@@ -3,13 +3,21 @@
 		{
 			"path": "pages/tabBar/home/home",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"app-plus": { // 取消默认的状态来
+					"titleNView": false,
+					"bounce": "none"
+				}
 			}
 		},
 		{
 			"path": "pages/tabBar/category/category",
 			"style": {
 				"navigationBarTitleText": "分类"
+				// "app-plus": { // 取消默认的状态来
+				// 	"titleNView": false,
+				// 	"bounce": "none"
+				// }
 			}
 		},
 		{
@@ -24,7 +32,11 @@
 				"navigationBarTitleText": "我的"
 			}
 		}
-	],
+	    ,{
+            "path" : "components/status/status",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "小李商城",

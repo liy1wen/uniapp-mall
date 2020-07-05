@@ -1,0 +1,1 @@
+  export default "https://uniapp-interface.herokuapp.com/"

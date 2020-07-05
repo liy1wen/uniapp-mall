@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "首页",
-  "usingComponents": {}
+  "usingComponents": {
+    "home-header": "/pages/tabBar/home/components/homeHeader"
+  }
 }
