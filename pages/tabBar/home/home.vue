@@ -89,7 +89,9 @@
 			},
 			//点击分类列表
 			handleCategory(item) {
-				console.log(item)
+				uni.navigateTo({
+					url: `../../goodsList/goodsList?name=${item.name}`
+				})
 			}
 		}
 
