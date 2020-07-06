@@ -27,7 +27,7 @@ export default function request(path,method,params){
         ...header
       },
       success (res) {
-		console.log(res,"success")
+		// console.log(res,"success")
 		if(res.statusCode && res.statusCode !== 200){ // api错误
 			uni.showToast({
 				title: res.msg,

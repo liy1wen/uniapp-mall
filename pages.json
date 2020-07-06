@@ -13,11 +13,11 @@
 		{
 			"path": "pages/tabBar/category/category",
 			"style": {
-				"navigationBarTitleText": "分类"
-				// "app-plus": { // 取消默认的状态来
-				// 	"titleNView": false,
-				// 	"bounce": "none"
-				// }
+				"navigationBarTitleText": "分类",
+				"app-plus": { // 取消默认的状态来
+					"titleNView": false,
+					"bounce": "none"
+				}
 			}
 		},
 		{
@@ -31,11 +31,14 @@
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
+		},
+		{
+			"path": "pages/goodsList/goodsList",
+			"style": {
+				"navigationBarTitleText": ""
+			}
 		}
-	    ,{
-            "path" : "components/status/status",
-            "style" : {}
-        }
+	   
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

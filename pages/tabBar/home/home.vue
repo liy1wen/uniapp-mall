@@ -3,7 +3,7 @@
 		<!-- 状态栏 -->
 		<header-status />
 		<!-- 顶部栏 -->
-		<homeHeader />
+		<page-header />
 		<!-- 轮播图 -->
 		<view class="swiper">
 			<view class="swiper-box" v-if="swiperList.length > 0">
@@ -54,11 +54,7 @@
 </template>
 
 <script>
-	import homeHeader from './components/homeHeader.vue'
 	export default {
-		components: {
-			homeHeader
-		},
 		data() {
 			return {
 				swiperList: [], // 轮播图片

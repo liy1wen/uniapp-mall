@@ -4,7 +4,7 @@
     "pages/tabBar/category/category",
     "pages/tabBar/cart/cart",
     "pages/tabBar/user/user",
-    "components/status/status"
+    "pages/goodsList/goodsList"
   ],
   "subPackages": [],
   "window": {
@@ -46,6 +46,7 @@
     ]
   },
   "usingComponents": {
-    "header-status": "/components/status/status"
+    "header-status": "/components/status/status",
+    "page-header": "/components/header/header"
   }
 }
