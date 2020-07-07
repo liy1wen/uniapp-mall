@@ -35,14 +35,28 @@
 		{
 			"path": "pages/goodsList/goodsList",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
 			}
 		}
 	   
+        ,{
+            "path" : "pages/goodsDetails/goodsDetails",
+            "style" : {
+				"navigationBarTitleText": "商品",
+				// "h5": {
+				// 	"titleNView": false
+				// },
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "小李商城",
+		"navigationBarTitleText": "商城",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#FFFFFF"
 	},

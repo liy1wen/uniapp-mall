@@ -57,9 +57,9 @@
 		methods: {
 			handleGoods(goods){
 				// 页面跳转 商品详情
-				// uni.navigateTo({
-				// 	url:'./goods?goodsInfo='+JSON.stringify(goods)
-				// })
+				uni.navigateTo({
+					url:'../goodsDetails/goodsDetails?goodsInfo='+JSON.stringify(goods)
+				})
 			},
 			handleSelect(index) {
 				this.filterByList[index].selected = true;
@@ -70,7 +70,7 @@
 						this.filterByList[i].selected = false;
 					}
 				}
-				
+				 
 				// 数据请求
 				this.filterby = this.filterByList[index].filterby;
 				this.page = 1;
@@ -80,7 +80,7 @@
 			},
 			async loadData() {
 				const {data} = await this.request.goods.getGoodsList(this.filterby,this.page,this.size)
-				console.log(data)
+				// console.log(data)
 				if(data.length > 0){
 					data.forEach(item => {
 						this.goodsList.push(item);
@@ -100,20 +100,20 @@
 			// 加载数据
 			this.loadData();
 		},
-		// onPullDownRefresh(){
-		// 	setTimeout(() => {
-		// 		this.page = 1;
-		// 		this.loadingText = "加载中...";
-		// 		this.goodsList = [];
-		// 		this.loadData();
-		// 		uni.stopPullDownRefresh();
-		// 	},1000)
-		// },
+		onPullDownRefresh(){
+			setTimeout(() => {
+				this.page = 1;
+				this.loadingText = "加载中...";
+				this.goodsList = [];
+				this.loadData();
+				uni.stopPullDownRefresh();
+			},1000)
+		},
 		// // 上啦加载
-		// onReachBottom(){
-		// 	this.page++;
-		// 	this.loadData();
-		// }
+		onReachBottom(){
+			this.page++;
+			this.loadData();
+		}
 	}
 </script>
 

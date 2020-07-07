@@ -4,12 +4,13 @@
     "pages/tabBar/category/category",
     "pages/tabBar/cart/cart",
     "pages/tabBar/user/user",
-    "pages/goodsList/goodsList"
+    "pages/goodsList/goodsList",
+    "pages/goodsDetails/goodsDetails"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "小李商城",
+    "navigationBarTitleText": "商城",
     "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#FFFFFF"
   },
@@ -48,5 +49,6 @@
   "usingComponents": {
     "header-status": "/components/status/status",
     "page-header": "/components/header/header"
-  }
+  },
+  "sitemapLocation": "sitemap90.json"
 }
