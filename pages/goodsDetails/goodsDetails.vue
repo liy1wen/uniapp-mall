@@ -12,6 +12,18 @@
 				</view>
 			</view>
 		</view>	
+		<!-- 轮播图 -->
+		<view class="swiper-box">
+			<swiper @change="currentSwiper++" circular="true" autoplay="true">
+				<swiper-item v-for="swiper in swiperList" :key="swiper.id">
+					<image :src="swiper.img"></image>
+				</swiper-item>
+			</swiper>
+			<view class="indicator">
+				{{currentSwiper + 1}}/{{swiperList.length}}
+			</view>
+		</view>
+		
 	</view>
 </template>
 
@@ -19,16 +31,24 @@
 	export default{
 		data() {
 			return{
-				showback: true
+				showback: true,
+				swiperList: [],
+				currentSwiper: 0
 			}
 		},
 		onLoad(option) {
 			// #ifdef MP
-				this.showback = false
-			// #endif
-			console.log(JSON.parse((option.goodsInfo)))
+			this.showback = false
+			// #endif 
+			// console.log(JSON.parse((option.goodsInfo)))
+			this.initData()
 		},
 		methods:{
+			// 获取商品详情
+			async initData() {
+				const {data} = await this.request.goods.getGoodsDetails();
+				this.swiperList = data.swiperList;
+			},
 			back(){
 				uni.navigateBack()
 			},
@@ -121,6 +141,38 @@
 					border-radius: 100%;
 				}
 			}
+		}
+	}
+	.swiper-box {
+		position: relative;
+		width: 100%;
+		height: 100vw;
+	
+		swiper {
+			width: 100%;
+			height: 100vw;
+	
+			swiper-item {
+				image {
+					width: 100%;
+					height: 100vw;
+				}
+			}
+		}
+	
+		.indicator {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 25upx;
+			height: 40upx;
+			border-radius: 40upx;
+			font-size: 22upx;
+			position: absolute;
+			bottom: 20upx;
+			right: 20upx;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.2);
 		}
 	}
 </style>
