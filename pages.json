@@ -39,7 +39,6 @@
 				"enablePullDownRefresh": true
 			}
 		}
-	   
         ,{
             "path" : "pages/goodsDetails/goodsDetails",
             "style" : {
@@ -52,6 +51,15 @@
 					"bounce": "none"
 				}
 			}
+        },{
+            "path" : "pages/goodsDetails/ratings",
+            "style" : {
+				"navigationBarTitleText": "评论列表"
+			}
+        }
+        ,{
+            "path" : "pages/goodsDetails/ratings",
+            "style" : {}
         }
     ],
 	"globalStyle": {
