@@ -110,7 +110,7 @@
 		components:{popupSpec},
 		data() {
 			return {
-				showback: false,
+				showback: true,
 				isKeep: false, // 收藏
 				goodsData: {
 					swiperList: [],

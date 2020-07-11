@@ -29,7 +29,11 @@
 		{
 			"path": "pages/tabBar/user/user",
 			"style": {
-				"navigationBarTitleText": "我的"
+				"navigationBarTitleText": "我的",
+				"backgroundTextStyle": "light",
+				"navigationBarBackgroundColor": "#f06c7a",
+				"backgroundColorTop": "#f06c7a",
+				"navigationBarTextStyle": "white"
 			}
 		},
 		{
@@ -57,9 +61,18 @@
 				"navigationBarTitleText": "评论列表"
 			}
         }
-        ,{
-            "path" : "pages/goodsDetails/ratings",
-            "style" : {}
+        ,
+        {
+        	"path": "pages/submitOrder/submitOrder",
+        	"style": {
+        		"navigationBarTitleText": "确定订单"
+        	}
+        },
+        {
+        	"path": "pages/tabBar/user/qrcode",
+        	"style": {
+        		"navigationBarTitleText": "我的二维码"
+        	}
         }
     ],
 	"globalStyle": {
