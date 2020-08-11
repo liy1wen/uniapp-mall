@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "商品",
-  "usingComponents": {}
+  "usingComponents": {
+    "popup-spec": "/pages/goodsDetails/components/popupSpec"
+  }
 }
